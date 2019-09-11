@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../stylesheets/base.css">
+    <link rel="stylesheet" href="../stylesheets/modules/navbar.css">
+    <link rel="stylesheet" href="../stylesheets/themes/signup-page.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+
+    <title>Stack-Overflow EDU</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header id="navbar">
+        <!-- Logo -->
+        <span id="logo"><a href="/">Stack-Overflow EDU</a> </span>
+        <!-- Navbar links that appear on large screens -->
+        <ul id="links">
+            <li><a href="/">Home</a></li>
+            <li><a href="./sign-up.html">Login / Signup</a></li>
+            <li><a href="./view-questions.html">View Questions</a></li>
+            <li><a href="./ask-question.html">Ask a Question</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+        <!-- Navbar dropdown menu that appears on smaller screens -->
+        <div id="dropDownContainer">
+            <input type="checkbox" name="navMenu" id="navMenu">
+            <label for="navMenu" class="dropBtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="dropDownLinks">
+                <a href="/">
+                    <li>Home</li>
+                </a>
+                <a href="./sign-up.html">
+                    <li>Login / Signup</li>
+                </a>
+                <a href="./view-questions.html">
+                    <li>View Questions</li>
+                </a>
+                <a href="./ask-question.html">
+                    <li>Ask a Question</li>
+                </a>
+                <a href="./about.html">
+                    <li>About</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div id="contentContainer">
+
+
+        <!-- Container for the signup and login forms -->
+        <div id="allFormsContainer">
+            <!-- Login form -->
+            <div id="logInContainer">
+                <h2>Login Now</h2>
+                <form action="#" id="logInForm">
+                    <input type="email" id="loginEmail" placeholder="Your email address">
+                    <input type="password" id="loginPassword" placeholder="Your password">
+                    <button type="button" class="submit-button" id="loginBtn">Submit</button>
+                </form>
+            </div>
+
+
+            <!-- Signup form -->
+            <div id="signUpContainer">
+                <h2>Signup Now</h2>
+                <form action="#" id="signUpForm">
+                    <!-- Each input has to have an id -->
+                    <!-- We use the id's to get information from the inputs -->
+                    <input type="text" id="firstName" placeholder="Your first name">
+                    <input type="text" id="lastName" placeholder="Your last name">
+                    <input type="email" id="email" placeholder="Your email address">
+                    <input type="password" id="password1" placeholder="Your password">
+                    <input type="password" id="password2" placeholder="Confirm password">
+
+                    <button type="button" id="signUpBtn" class="submit-button">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+    <!-- <script src="/__/firebase/init.js"></script> -->
+
+    <script>
+        // Your web app's Firebase configuration
+        //API J-zone?
+        var firebaseConfig = {
+            apiKey: "AIzaSyCk1hieTv75YHvVeR0ULhv2QOrjxzXDHJk",
+            authDomain: "stackoverflow-edu-po.firebaseapp.com",
+            databaseURL: "https://stackoverflow-edu-po.firebaseio.com",
+            projectId: "stackoverflow-edu-po",
+            storageBucket: "",
+            messagingSenderId: "916950910171",
+            appId: "1:916950910171:web:06e150c6836a67dde838fe"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- My scripts for this page -->
+    <script src="../scripts/user-login.js"></script>
+
+
+</body>
+
+</html>
